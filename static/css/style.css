@@ -1,0 +1,137 @@
+/* Classic Aquamarine & Dark Obsidian Research Theme (Clean & Non-Glowy) */
+
+:root {
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+  --aquamarine: #14b8a6;
+  --aquamarine-dark: #0f766e;
+  --aquamarine-light: #2dd4bf;
+  --bg-main: #0b0f19;
+  --bg-sidebar: #070a12;
+  --bg-card: #111827;
+  --border-color: #1e293b;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-main);
+  color: #f1f5f9;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code, pre, .font-mono {
+  font-family: var(--font-mono);
+}
+
+/* Elegant Slate Cards (Clean, non-glowy) */
+.aquamarine-card {
+  background: #111827;
+  border: 1px solid #1e293b;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.4);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.aquamarine-card:hover {
+  border-color: #334155;
+}
+
+/* Classic Aquamarine Primary Button */
+.btn-aquamarine {
+  background: #0d9488;
+  color: #ffffff;
+  border: 1px solid #14b8a6;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  box-shadow: 0 2px 10px rgba(13, 148, 136, 0.25);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-aquamarine:hover {
+  background: #14b8a6;
+  border-color: #2dd4bf;
+  box-shadow: 0 4px 14px rgba(20, 184, 166, 0.35);
+  transform: translateY(-1px);
+}
+
+.btn-aquamarine:active {
+  background: #0f766e;
+  transform: translateY(1px);
+  box-shadow: 0 1px 4px rgba(13, 148, 136, 0.2);
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #070a12;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+/* Option Badges & Accents */
+.option-card-A { border-left: 3px solid #14b8a6; }
+.option-card-B { border-left: 3px solid #06b6d4; }
+.option-card-C { border-left: 3px solid #f59e0b; }
+.option-card-D { border-left: 3px solid #ec4899; }
+
+.badge-A {
+  background-color: rgba(20, 184, 166, 0.12);
+  color: #2dd4bf;
+  border: 1px solid rgba(20, 184, 166, 0.3);
+}
+.badge-B {
+  background-color: rgba(6, 182, 212, 0.12);
+  color: #38bdf8;
+  border: 1px solid rgba(6, 182, 212, 0.3);
+}
+.badge-C {
+  background-color: rgba(245, 158, 11, 0.12);
+  color: #fbbf24;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+.badge-D {
+  background-color: rgba(236, 72, 153, 0.12);
+  color: #f472b6;
+  border: 1px solid rgba(236, 72, 153, 0.3);
+}
+
+/* Sidebar Nav item */
+.sidebar-link {
+  display: flex;
+  items-center: center;
+  padding: 0.625rem 0.875rem;
+  border-radius: 0.625rem;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: #94a3b8;
+  transition: all 0.15s ease;
+}
+
+.sidebar-link:hover {
+  background-color: #1e293b;
+  color: #ffffff;
+}
+
+.sidebar-link.active {
+  background-color: rgba(20, 184, 166, 0.15);
+  color: #2dd4bf;
+  font-weight: 600;
+  border: 1px solid rgba(20, 184, 166, 0.3);
+}
+
+/* Progress bar transitions */
+.progress-fill {
+  transition: width 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}

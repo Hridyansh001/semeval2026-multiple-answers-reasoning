@@ -1,0 +1,128 @@
+[
+  {
+    "id": "preset-1",
+    "title": "Chemical Plant Explosion (Texas)",
+    "category": "Industrial Accident",
+    "type": "Single-Answer (B)",
+    "event": "A major chemical plant fire occurred in Texas causing regional evacuations and hazardous air quality alerts.",
+    "documents": [
+      "Emergency crews arrived at the Deer Park chemical complex at 3:15 PM following reports of structural damage in the hydrocarbon processing unit.",
+      "Preliminary internal investigation logs confirmed that a critical pressure relief valve failure on Tank 4 failed to vent accumulating pressurized gas, triggering an immediate catastrophic rupture and fireball.",
+      "Nearby schools and residential blocks within a 3-mile radius were issued shelter-in-place warnings due to elevated benzene levels."
+    ],
+    "options": {
+      "A": "A sudden thunderstorm damaged municipal power transmission lines across the county.",
+      "B": "A pressure valve failure caused an explosion and rupture in Tank 4.",
+      "C": "A scheduled labor union strike halted automatic maintenance routines.",
+      "D": "None of the others"
+    },
+    "golden": "B",
+    "rationale": "Document 2 explicitly identifies the pressure relief valve failure on Tank 4 triggering an immediate catastrophic rupture and fireball as the direct causal event."
+  },
+  {
+    "id": "preset-2",
+    "title": "South Korea Parliamentary Impeachment",
+    "category": "Political Crisis",
+    "type": "Multi-Answer (B, D)",
+    "event": "South Korea's parliament voted overwhelmingly to impeach President Yoon Suk Yeol in an emergency legislative session.",
+    "documents": [
+      "On the night of December 3, President Yoon Suk Yeol made a sudden televised broadcast declaring emergency martial law, accusing opposition parties of anti-state activities.",
+      "Immediately following the decree, military helicopters landed at the National Assembly complex and hundreds of armed special forces soldiers attempted to storm the legislative chambers.",
+      "Lawmakers broke through police cordons and climbed perimeter fences to enter the chamber, voting 190-0 to nullify the martial law decree within hours.",
+      "Massive crowds numbering in the tens of thousands filled the streets outside parliament demanding accountability for the unconstitutional military deployment."
+    ],
+    "options": {
+      "A": "President Yoon's cabinet ministers submitted their resignations en masse.",
+      "B": "Hundreds of armed soldiers stormed the National Assembly building to halt parliamentary proceedings.",
+      "C": "Tens of thousands of civic protesters assembled peacefully in Gwanghwamun Square.",
+      "D": "President Yoon Suk Yeol abruptly declared emergency martial law and deployed military forces to parliament."
+    },
+    "golden": "B,D",
+    "rationale": "Both the martial law decree by President Yoon (Option D) and the deployment of armed troops storming the National Assembly (Option B) served as joint causal triggers that prompted lawmakers to introduce and vote for immediate presidential impeachment."
+  },
+  {
+    "id": "preset-3",
+    "title": "Shinzo Abe Assassination Video Circulation",
+    "category": "Security Incident",
+    "type": "Single-Answer (D)",
+    "event": "Shocking video footage of the assassination of former Prime Minister Shinzo Abe circulated widely across global social media.",
+    "documents": [
+      "Former Japanese Prime Minister Shinzo Abe was delivering a campaign speech near Yamato-Saidaiji Station in Nara City ahead of the upper house elections.",
+      "At approximately 11:30 AM, a 41-year-old lone gunman approached from behind and fired two shots using a concealed, custom-fabricated double-barreled firearm.",
+      "Bystanders and campaign staff recorded the sudden gunshots, smoke plume, and security personnel wrestling the suspect to the pavement.",
+      "Abe was airlifted to Nara Medical University Hospital with severe cardiopulmonary arrest and later pronounced dead."
+    ],
+    "options": {
+      "A": "The attacker was armed with a factory-manufactured hunting rifle.",
+      "B": "Security agents detained the suspect Tetsuya Yamagami on site.",
+      "C": "Shinzo Abe served as Japan's longest-tenured prime minister during the 2010s.",
+      "D": "A gunman approached from behind and fired twice at Shinzo Abe during a public speech."
+    },
+    "golden": "D",
+    "rationale": "The video footage circulating on social media was created because a gunman approached and shot Shinzo Abe during a broad daylight public rally (Option D)."
+  },
+  {
+    "id": "preset-4",
+    "title": "Airliner Fleet Emergency Grounding",
+    "category": "Aviation Safety",
+    "type": "Multi-Answer (A, C)",
+    "event": "Civil aviation authorities ordered the immediate grounding and mandatory inspection of all Model-7X passenger jets nationwide.",
+    "documents": [
+      "A scheduled commercial flight experienced sudden in-flight cabin depressurization when an unbolted emergency exit door plug detached at 16,000 feet.",
+      "Post-incident inspections by federal investigators revealed missing retaining bolts and recurring fatigue micro-cracks in fuselage door fittings on multiple sister aircraft.",
+      "Regulatory inspectors cited multiple manufacturing quality lapses at subcontractor assembly plants where door assemblies were installed without documentation.",
+      "Airline ticket prices surged as carriers cancelled over 300 daily flights during the peak winter travel corridor."
+    ],
+    "options": {
+      "A": "An emergency exit door plug blew out during flight due to missing retaining bolts.",
+      "B": "A heavy blizzard grounded air operations across five major Midwestern hub airports.",
+      "C": "Federal investigators detected recurring structural micro-cracks in door fittings across multiple sister airframes.",
+      "D": "None of the others"
+    },
+    "golden": "A,C",
+    "rationale": "The grounding order was driven by two complementary causal findings: the initial blowout of the door plug on the operating flight (Option A) and the systematic discovery of structural micro-cracks across sister aircraft during investigative audits (Option C)."
+  },
+  {
+    "id": "preset-5",
+    "title": "Metropolitan Power Grid Blackout",
+    "category": "Infrastructure",
+    "type": "Multi-Answer (A, B, C)",
+    "event": "Over four million residents lost electrical power across the metropolitan corridor during an extreme summer heatwave.",
+    "documents": [
+      "Record temperatures reaching 108°F caused regional air conditioning power demand to hit unprecedented peak levels of 78,000 megawatts.",
+      "At 4:40 PM, a key high-voltage transmission line sagged into overgrown vegetation and short-circuited, tripping protective relays.",
+      "Simultaneously, a cyber breach on supervisory control software delayed automated load-balancing rerouting commands between substations.",
+      "Municipal hospitals switched to emergency diesel generators while subway transit lines ground to a halt."
+    ],
+    "options": {
+      "A": "Record high temperatures triggered historic peak electrical demand for air conditioning.",
+      "B": "A high-voltage transmission line sagged into trees and tripped regional substation relays.",
+      "C": "A cyber intrusion compromised supervisory control systems, disabling automated grid load shedding.",
+      "D": "A coastal tsunami damaged cooling seawater intake pumps at a nuclear facility."
+    },
+    "golden": "A,B,C",
+    "rationale": "A compound failure led to the grid collapse: excessive heat-driven power load (A), the physical transmission line short-circuit (B), and disabled cyber load-shedding systems (C). All three acted as simultaneous causal factors."
+  },
+  {
+    "id": "preset-6",
+    "title": "Pharmaceutical Clinical Trial Voluntary Recall",
+    "category": "Biomedical / Healthcare",
+    "type": "Single-Answer (C)",
+    "event": "A leading biotechnology firm halted Phase III trials and recalled batches of investigational peptide drug Bio-91.",
+    "documents": [
+      "The clinical trial had enrolled over 1,200 patients suffering from autoimmune rheumatoid arthritis across twelve clinical centers.",
+      "During month 4 biomarker monitoring, routine toxicology screens uncovered acute elevated hepatic enzyme levels indicating drug-induced liver injury in 6% of active-arm participants.",
+      "The Independent Data Safety Monitoring Board issued an urgent directive advising trial sponsors to cease administration immediately.",
+      "The company's stock fell 22% in early morning trading following the regulatory notification."
+    ],
+    "options": {
+      "A": "Patient recruitment failed to meet minimum statistical enrollment quotas.",
+      "B": "The pharmaceutical patent rights expired without viable renewal options.",
+      "C": "Safety monitors discovered acute drug-induced liver toxicity and elevated hepatic enzymes in trial participants.",
+      "D": "Competitor manufacturers released a cheaper generic equivalent medication."
+    },
+    "golden": "C",
+    "rationale": "The safety monitoring board discovered liver toxicity and elevated enzymes in trial participants (Option C), directly compelling the trial halt and batch recall."
+  }
+]
+

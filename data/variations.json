@@ -1,0 +1,255 @@
+[
+  {
+    "id": "var-chem-base",
+    "domain": "Industrial Safety",
+    "title": "Chemical Plant Explosion (Texas)",
+    "category": "Baseline Single-Cause",
+    "variation_type": "Original Baseline (B)",
+    "event": "A major chemical plant fire occurred in Texas causing regional evacuations and hazardous air quality alerts.",
+    "documents": [
+      "Emergency crews arrived at the Deer Park chemical complex at 3:15 PM following reports of structural damage in the hydrocarbon processing unit.",
+      "Preliminary internal investigation logs confirmed that a critical pressure relief valve failure on Tank 4 failed to vent accumulating pressurized gas, triggering an immediate catastrophic rupture and fireball.",
+      "Nearby schools and residential blocks within a 3-mile radius were issued shelter-in-place warnings due to elevated benzene levels."
+    ],
+    "options": {
+      "A": "A sudden thunderstorm damaged municipal power transmission lines across the county.",
+      "B": "A pressure valve failure caused an explosion and rupture in Tank 4.",
+      "C": "A scheduled labor union strike halted automatic maintenance routines.",
+      "D": "None of the others"
+    },
+    "golden": "B",
+    "rationale": "Document 2 directly identifies the pressure relief valve failure on Tank 4 triggering the rupture and fireball."
+  },
+  {
+    "id": "var-chem-multi",
+    "domain": "Industrial Safety",
+    "title": "Chemical Plant Explosion (Multi-Cause Confluence)",
+    "category": "Multi-Cause Variation",
+    "variation_type": "Compound Multi-Answer (B, C)",
+    "event": "A major chemical plant fire occurred in Texas causing regional evacuations and hazardous air quality alerts.",
+    "documents": [
+      "Investigation findings revealed that a pressure relief valve on Tank 4 suffered mechanical jamming under high vapor pressure.",
+      "Simultaneously, a complete failure of the emergency deluge sprinkler system deprived the unit of cooling water after automated backup pumps were shut down during an unlogged maintenance procedure.",
+      "The compound failure of pressure venting and backup water cooling caused rapid thermal runaway within 18 minutes."
+    ],
+    "options": {
+      "A": "Severe regional lightning strikes knocked out electrical substation feeds.",
+      "B": "A pressure relief valve jammed and ruptured Tank 4 under intense pressure.",
+      "C": "The emergency deluge sprinkler cooling system failed to activate due to shutdown backup pumps.",
+      "D": "None of the others"
+    },
+    "golden": "B,C",
+    "rationale": "Both the relief valve jamming (B) and the emergency cooling deluge system failure (C) acted as joint causal catalysts."
+  },
+  {
+    "id": "var-chem-distractor",
+    "domain": "Industrial Safety",
+    "title": "Chemical Plant Explosion (Subtle Distractor Test)",
+    "category": "Adversarial Distractor",
+    "variation_type": "Adversarial Single-Answer (A)",
+    "event": "A major chemical plant fire occurred in Texas causing regional evacuations and hazardous air quality alerts.",
+    "documents": [
+      "Forensic investigators ruled out any structural or mechanical flaws in Tank 4 or its pressure valves, which passed ultrasonic integrity tests.",
+      "Instead, an offsite high-voltage electrical transformer explosion arc-flashed into an external storage pipeline, sparking the blaze.",
+      "Local labor representatives confirmed all plant operators were on duty and followed emergency shutdown protocols."
+    ],
+    "options": {
+      "A": "An offsite electrical transformer explosion arc-flashed into an external fuel line.",
+      "B": "A pressure relief valve failure triggered an internal explosion in Tank 4.",
+      "C": "Plant operators abandoned monitoring consoles during a labor dispute.",
+      "D": "None of the others"
+    },
+    "golden": "A",
+    "rationale": "Counterfactual evidence explicitly rules out Tank 4 (Option B) and attributes the cause to the external transformer arc flash (Option A)."
+  },
+  {
+    "id": "var-yoon-base",
+    "domain": "Geopolitics",
+    "title": "South Korea Parliamentary Impeachment",
+    "category": "Baseline Multi-Cause",
+    "variation_type": "Original Dual-Answer (B, D)",
+    "event": "South Korea's parliament voted overwhelmingly to impeach President Yoon Suk Yeol in an emergency legislative session.",
+    "documents": [
+      "On the night of December 3, President Yoon Suk Yeol made a sudden televised broadcast declaring emergency martial law, accusing opposition parties of anti-state activities.",
+      "Immediately following the decree, military helicopters landed at the National Assembly complex and hundreds of armed special forces soldiers attempted to storm the legislative chambers.",
+      "Lawmakers broke through police cordons and climbed perimeter fences to enter the chamber, voting 190-0 to nullify the martial law decree within hours."
+    ],
+    "options": {
+      "A": "President Yoon's cabinet ministers submitted their resignations en masse.",
+      "B": "Hundreds of armed soldiers stormed the National Assembly building to halt parliamentary proceedings.",
+      "C": "Tens of thousands of civic protesters assembled peacefully in Gwanghwamun Square.",
+      "D": "President Yoon Suk Yeol abruptly declared emergency martial law and deployed military forces to parliament."
+    },
+    "golden": "B,D",
+    "rationale": "Both the martial law decree (D) and the armed storming of parliament (B) constituted the unconstitutional triggers for impeachment."
+  },
+  {
+    "id": "var-cyber-zero",
+    "domain": "Cybersecurity",
+    "title": "Global Cloud Hypervisor Outage",
+    "category": "Cyber Incident",
+    "variation_type": "Single-Answer (A)",
+    "event": "Over 14,000 corporate cloud instances crashed in synchronized failure across European datacenters.",
+    "documents": [
+      "A kernel-level security telemetry update released by a global cybersecurity vendor contained an out-of-bounds memory read error in its driver module.",
+      "When host machines loaded the signed update at 04:09 UTC, Windows kernel exceptions triggered immediate blue screen crash loops across all client virtual machines.",
+      "Network routing telemetry showed no external DDoS attack packets or unauthorized packet injections during the incident window."
+    ],
+    "options": {
+      "A": "A kernel-level cybersecurity telemetry driver update triggered fatal out-of-bounds memory crashes.",
+      "B": "A state-sponsored distributed denial-of-service attack flooded datacenter edge gateways.",
+      "C": "Undersea fiber optic cables connecting London and Amsterdam were severed by fishing trawlers.",
+      "D": "None of the others"
+    },
+    "golden": "A",
+    "rationale": "Document 1-2 explicitly confirm the driver update memory flaw as the direct cause, while ruling out DDoS attacks."
+  },
+  {
+    "id": "var-cyber-multi",
+    "domain": "Cybersecurity",
+    "title": "FinTech Payment Gateway Ransomware & Data Theft",
+    "category": "Cyber Incident",
+    "variation_type": "Multi-Answer (A, C)",
+    "event": "A transnational payment processing hub halted all card authorizations and reported unauthorized database exfiltration.",
+    "documents": [
+      "Adversaries leveraged an unpatched zero-day remote code execution vulnerability in the public-facing API portal to obtain initial web shell access.",
+      "Forensic logs revealed that stolen administrator credentials without multi-factor authentication allowed the attackers to move laterally into encrypted cardholder databases.",
+      "Network engineers detected data staging servers transmitting 4 terabytes of compressed archives to bulletproof hosting IP ranges."
+    ],
+    "options": {
+      "A": "Attackers exploited an unpatched zero-day remote code execution flaw in the web API gateway.",
+      "B": "A localized power substation surge damaged the main SAN storage arrays.",
+      "C": "Compromised administrator credentials lacking multi-factor authentication enabled lateral database intrusion.",
+      "D": "A software licensing dispute led third-party payment providers to revoke API keys."
+    },
+    "golden": "A,C",
+    "rationale": "Initial entry occurred via the zero-day API exploit (A) and lateral database expansion occurred via single-factor admin credentials (C)."
+  },
+  {
+    "id": "var-aero-door",
+    "domain": "Aerospace & Aviation",
+    "title": "Commercial Airliner Fleet Emergency Grounding",
+    "category": "Aviation Safety",
+    "variation_type": "Dual-Answer (A, C)",
+    "event": "Civil aviation authorities ordered the immediate grounding and mandatory inspection of all Model-7X passenger jets nationwide.",
+    "documents": [
+      "A scheduled commercial flight experienced sudden in-flight cabin depressurization when an unbolted emergency exit door plug detached at 16,000 feet.",
+      "Post-incident inspections by federal investigators revealed missing retaining bolts and recurring fatigue micro-cracks in fuselage door fittings on multiple sister aircraft.",
+      "Regulatory inspectors cited multiple manufacturing quality lapses at subcontractor assembly plants where door assemblies were installed without documentation."
+    ],
+    "options": {
+      "A": "An emergency exit door plug blew out during flight due to missing retaining bolts.",
+      "B": "A heavy blizzard grounded air operations across five major Midwestern hub airports.",
+      "C": "Federal investigators detected recurring structural micro-cracks in door fittings across multiple sister airframes.",
+      "D": "None of the others"
+    },
+    "golden": "A,C",
+    "rationale": "The blowout incident (A) combined with systematic sister airframe micro-cracks (C) drove the fleetwide grounding directive."
+  },
+  {
+    "id": "var-grid-multi",
+    "domain": "Infrastructure & Energy",
+    "title": "Metropolitan Power Grid Cascade Failure",
+    "category": "Complex Multi-Cause",
+    "variation_type": "Triple-Answer (A, B, C)",
+    "event": "Over four million residents lost electrical power across the metropolitan corridor during an extreme summer heatwave.",
+    "documents": [
+      "Record temperatures reaching 108°F caused regional air conditioning power demand to hit unprecedented peak levels of 78,000 megawatts.",
+      "At 4:40 PM, a key high-voltage transmission line sagged into overgrown vegetation and short-circuited, tripping protective relays.",
+      "Simultaneously, a cyber breach on supervisory control software delayed automated load-balancing rerouting commands between substations."
+    ],
+    "options": {
+      "A": "Record high temperatures triggered historic peak electrical demand for air conditioning.",
+      "B": "A high-voltage transmission line sagged into trees and tripped regional substation relays.",
+      "C": "A cyber intrusion compromised supervisory control systems, disabling automated grid load shedding.",
+      "D": "A coastal tsunami damaged cooling seawater intake pumps at a nuclear facility."
+    },
+    "golden": "A,B,C",
+    "rationale": "Unprecedented air-conditioning demand (A), physical line sag short-circuit (B), and disabled SCADA load-balancing (C) all converged to cause the collapse."
+  },
+  {
+    "id": "var-bio-trial",
+    "domain": "Biomedicine",
+    "title": "Pharmaceutical Phase III Trial Suspension",
+    "category": "Healthcare Safety",
+    "variation_type": "Single-Answer (C)",
+    "event": "A leading biotechnology firm halted Phase III trials and recalled batches of investigational peptide drug Bio-91.",
+    "documents": [
+      "The clinical trial had enrolled over 1,200 patients suffering from autoimmune rheumatoid arthritis across twelve clinical centers.",
+      "During month 4 biomarker monitoring, routine toxicology screens uncovered acute elevated hepatic enzyme levels indicating drug-induced liver injury in 6% of active-arm participants.",
+      "The Independent Data Safety Monitoring Board issued an urgent directive advising trial sponsors to cease administration immediately."
+    ],
+    "options": {
+      "A": "Patient recruitment failed to meet minimum statistical enrollment quotas.",
+      "B": "The pharmaceutical patent rights expired without viable renewal options.",
+      "C": "Safety monitors discovered acute drug-induced liver toxicity and elevated hepatic enzymes in trial participants.",
+      "D": "Competitor manufacturers released a cheaper generic equivalent medication."
+    },
+    "golden": "C",
+    "rationale": "Severe drug-induced liver injury discovered during biomarker toxicology screens (C) prompted the immediate halt."
+  },
+  {
+    "id": "var-space-abort",
+    "domain": "Space Exploration",
+    "title": "Orbital Rocket Launch Abort at T-minus 12 Seconds",
+    "category": "Aerospace",
+    "variation_type": "Dual-Answer (A, D)",
+    "event": "Mission flight controllers declared an automated pad abort for heavy-lift rocket Titan-IX twelve seconds prior to ignition.",
+    "documents": [
+      "Ground telemetry sensors registered abnormal liquid oxygen turbopump chilldown pressure variations in Stage 1 Engine 3.",
+      "Concurrently, the automated umbilical tower arm failed to retract and lock in its safe launch corridor position.",
+      "Range safety weather radar confirmed calm wind vectors and zero lightning risk across the launch complex."
+    ],
+    "options": {
+      "A": "Sensor telemetry detected abnormal turbopump chilldown pressure fluctuations in Engine 3.",
+      "B": "Severe high-altitude wind shear exceeded aerodynamic launch envelope limits.",
+      "C": "Loss of primary satellite command communications with mission control.",
+      "D": "The launch umbilical tower arm failed to retract and clear the rocket trajectory."
+    },
+    "golden": "A,D",
+    "rationale": "Both the cryogenic engine turbopump pressure anomaly (A) and the unretracted umbilical tower arm (D) triggered the pad abort safety loop."
+  },
+  {
+    "id": "var-fin-flash",
+    "domain": "Financial Markets",
+    "title": "Stock Exchange Algorithmic Flash Freeze",
+    "category": "Algorithmic Finance",
+    "variation_type": "Single-Answer (B)",
+    "event": "The central equities exchange triggered an unscheduled 45-minute circuit-breaker market halt.",
+    "documents": [
+      "Market surveillance monitors detected an errant high-frequency algorithmic quoting loop generating 3.8 million cancellation orders per second.",
+      "The order book congestion caused packet drops across matching engine memory queues, introducing asymmetrical order latency.",
+      "Regulators confirmed no macro-economic rate announcements or sovereign debt defaults occurred during the trading session."
+    ],
+    "options": {
+      "A": "The Federal Reserve announced an emergency inter-meeting interest rate hike.",
+      "B": "A rogue high-frequency algorithmic loop flooded matching engines with millions of quote cancellations.",
+      "C": "An optical fiber disruption severed trans-Atlantic communication between London and New York.",
+      "D": "A global sovereign debt default triggered widespread institutional margin calls."
+    },
+    "golden": "B",
+    "rationale": "The flood of algorithmic cancellations overloading the matching engine queues (B) was the sole technical cause for the trading halt."
+  },
+  {
+    "id": "var-autonomous-crash",
+    "domain": "Autonomous Systems",
+    "title": "Robotaxi Fleet Emergency Stop in Downtown",
+    "category": "Robotics & AI",
+    "variation_type": "Dual-Answer (B, C)",
+    "event": "A commercial fleet of forty autonomous robotaxis came to an abrupt halt simultaneously in city center intersections.",
+    "documents": [
+      "Urban construction crews deployed highly reflective non-standard orange vinyl barriers and flashing stroboscopic work lights at 6th and Pine.",
+      "The vehicle perception models experienced simultaneous semantic segmentation hallucination, misclassifying the strobe reflections as dynamic phantom pedestrians.",
+      "A cellular base station outage also degraded real-time remote human teleoperation backup connectivity across the 4-block grid."
+    ],
+    "options": {
+      "A": "A sudden winter blizzard froze ultrasonic distance sensors across all vehicles.",
+      "B": "Perception neural networks suffered vision hallucination from construction strobes, detecting phantom pedestrians.",
+      "C": "A cellular base station outage disabled real-time teleoperation backup connectivity.",
+      "D": "Rival taxi unions physically obstructed vehicle navigation pathways."
+    },
+    "golden": "B,C",
+    "rationale": "Vision model hallucination from strobe lights (B) paired with the teleoperation connection failure (C) forced the fleet into failsafe emergency stop."
+  }
+]
+
